@@ -3,8 +3,10 @@
 
 <head>
   <title>快点TTS</title>
+  <meta name="description" content="快点TTS是一个免费的文本转语音工具，也是一个在线文本阅读器，可以将文本转换成语音，它支持100多种语言和多种语音风格，强大的神经网络使语音听起来更加自然，您可以在线试听，或者按mp3格式下载音频文件。">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="https://jsdelivr.quickso.cn/gh/muzihuaner/huancdn@main/img/icon/favicon.ico" type="image/x-icon" />
   <link href="https://gcore.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
@@ -39,7 +41,7 @@
       </div>
       <div class="row">
         <div class="col">
-          <label for="voiceName" class="form-label">声音：</label>
+          <label for="voiceName" class="form-label">请选择你喜欢的声音：</label>
           <select name="voiceName" class="form-select" onchange="updateConfigName()">
           </select>
           <div class="form-text">声音列表加载可能有点慢，请耐心等待！</div>
@@ -90,21 +92,34 @@
 
         <div class="row">
           <div class="col">
-            <label for="previewText" class="form-label">测试文本：</label>
-            <textarea name="previewText" class="form-control" rows="3" cols="">这是快点TTS文字转语音效果。</textarea>
+            <label for="previewText" class="form-label">请输入内容：</label>
+            <textarea name="previewText" class="form-control" rows="16" cols="">这是快点TTS文字转语音效果。</textarea>
           </div>
         </div>
         <div style="height:20px"></div>
         <div class="row">
           <div class="col">
-            <button id="previewButton" type="button" class="btn btn-secondary" onclick="preview()">测试</button>
+            <button id="previewButton" type="button" class="btn btn-secondary" onclick="preview()">预览</button>
             <button style="color: #fff;background-color: #0d6efd;border-color: #0d6efd;" id="previewButton" type="button" class="btn btn-secondary" onclick="download()">下载</button>
             <!-- <button type="button" class="btn btn-primary" onclick='createLegadoUrl()'>生成阅读（legado）语音引擎链接</button> -->
           </div>
         </div>
     </form>
     <div style="height:50px"></div>
+    <p class="mt-2 ">快点TTS是一个免费的文本转语音工具，提供语音合成服务，支持多种语言：英语、法语、德语、西班牙、阿拉伯语、中文、日语、韩语，越南语 …… 及多种语音风格，您可以使用它朗读文本和电子书，也可以下载合成后的音频文件。这个TTS工具可以在线将文本转换成语音，非常方便，而且永久免费。</p>
+    <div class="copyright" style="margin: 0 auto; color: black;">
+      <script type="text/javascript">
+          copyright=new Date();//取得当前的日期
+          update=copyright.getFullYear();//取得当前的年份
+          document.write("Copyright © 2016-"+ update + ' <a href="https://huangetech.github.io/" title="按下“Ctrl+D”试试？"><b>欢哥科技</b></a> All rights reserved. ');
+          
+          </script></div>
   </div>
+  <style>
+    .copyright a{
+        color: black;
+    }
+  </style>
 
 
   <div id="legadoUrlModal" class="modal " tabindex="-1">
